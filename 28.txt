@@ -1,0 +1,15 @@
+Solution of postgress :
+  1.create table student(roll_no int,name text,course text,primary key(roll_no));
+  2.insert into  student values(1,'Arpit','python'),(2,'Anup','java'),(3,'daksh','blockchain'),(4,'deepak','data s
+    cince');
+  3.select * from student;
+  4.update student set name='mohan' where roll_no=3;
+  5.delete from student where roll_no=3;
+  6.delete from student ;
+  7.drop table student;
+  8.create table student(roll_no  int ,name text,c_id int , primary key(roll_no),constraint fk_id foreign key(c_id
+     )references course(c_id));
+  9. (A) insert into course values(101,'python'),(102,'java'),(103,'block chain');
+     (B) insert into student values(1,'arpit',101),(2,'anup',102),(3,'daksh',103);
+  10.select name from student where c_id in (select c_id from course where c_name='python');
+
